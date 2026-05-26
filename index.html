@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebCraft Studio adalah project portfolio frontend dasar hasil refactor dari repository praktikum web lama.">
+  <meta name="theme-color" content="#f5efe6">
+  <title>WebCraft Studio — Modern Responsive Web Practice</title>
+  <link rel="icon" href="assets/images/logo-ilab-1.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container header-shell">
+      <a class="brand" href="#home" aria-label="WebCraft Studio beranda">
+        <img src="assets/images/logo-ilab-1.png" alt="Logo WebCraft Studio" class="brand__logo">
+        <span class="brand__text">
+          <strong>WebCraft Studio</strong>
+          <span>Modern Responsive Web Practice</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+        <span class="sr-only">Buka menu navigasi</span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama" data-nav-menu>
+        <a href="#home">Home</a>
+        <a href="#practice">Practice</a>
+        <a href="#structure">Structure</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Portfolio dasar untuk latihan frontend</p>
+          <h1>Project praktikum lama, sekarang lebih rapi, responsif, dan siap dipakai sebagai portofolio.</h1>
+          <p class="hero__text">
+            WebCraft Studio mempertahankan struktur landing page sederhana dari versi lama, lalu merapikannya dengan HTML semantik,
+            CSS modular, dan JavaScript ringan agar lebih mudah dibaca dan dikembangkan.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#contact">Hubungi Studio</a>
+            <a class="button button--ghost" href="#structure">Lihat Struktur</a>
+          </div>
+
+          <dl class="hero__stats" aria-label="Ringkasan project">
+            <div>
+              <dt>1</dt>
+              <dd>halaman utama tetap berjalan</dd>
+            </div>
+            <div>
+              <dt>3</dt>
+              <dd>ukuran layar yang ditarget</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>dependensi framework berat</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero__media">
+          <div class="hero__frame">
+            <img src="assets/images/hero-1.png" alt="Laptop menampilkan kode di layar sebagai ilustrasi aktivitas pengembangan web" loading="eager">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="practice">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Fokus latihan</p>
+          <h2>Konsep lama tetap ada, tapi tampilannya dibuat lebih modern dan mudah dirawat.</h2>
+          <p>Bagian ini merangkum arah refactor yang paling penting untuk proyek praktikum web dasar.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>HTML semantik</h3>
+            <p>Header, main, section, figure, dan footer dipakai sesuai fungsi agar struktur lebih jelas dan aksesibel.</p>
+          </article>
+          <article class="card">
+            <h3>CSS modular</h3>
+            <p>Gaya dasar dipisah dari breakpoint responsive supaya perawatan layout lebih mudah dan tidak bercampur.</p>
+          </article>
+          <article class="card">
+            <h3>JS sederhana</h3>
+            <p>JavaScript hanya dipakai untuk interaksi ringan seperti menu mobile, validasi form, dan pengisian tahun otomatis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="structure">
+      <div class="container split-layout">
+        <div>
+          <div class="section-heading section-heading--compact">
+            <p class="eyebrow">Rencana struktur baru</p>
+            <h2>Folder dipisah berdasarkan fungsi supaya project lebih mudah dibaca.</h2>
+          </div>
+
+          <ul class="checklist">
+            <li>Halaman utama berada langsung di root sebagai <strong>index.html</strong>.</li>
+            <li>Aset visual dipisah ke <strong>images</strong> dan <strong>icons</strong>.</li>
+            <li>Gaya utama dipusatkan di <strong>css/style.css</strong> dan <strong>css/responsive.css</strong>.</li>
+            <li>Interaksi ringan dipindah ke <strong>js/main.js</strong>.</li>
+          </ul>
+        </div>
+
+        <aside class="info-panel">
+          <h3>Yang dipertahankan</h3>
+          <p>Logo lama, ikon sosial, dan hero image tetap digunakan agar jejak project praktikum tidak hilang.</p>
+          <h3>Yang diperbaiki</h3>
+          <p>Spacing, hierarki heading, ukuran elemen, kontras warna, dan perilaku responsive untuk desktop, tablet, serta mobile.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="contact">
+      <div class="container split-layout split-layout--contact">
+        <div>
+          <div class="section-heading section-heading--compact">
+            <p class="eyebrow">Form validasi ringan</p>
+            <h2>Form kontak sederhana untuk demo validasi sisi klien.</h2>
+            <p>Form ini tidak mengirim data ke backend, tetapi memberi validasi dasar agar project tetap terasa lengkap.</p>
+          </div>
+        </div>
+
+        <form class="contact-form" novalidate data-contact-form>
+          <label for="name">Nama</label>
+          <input id="name" name="name" type="text" placeholder="Nama lengkap" autocomplete="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
+
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tulis kebutuhan atau catatan project" required></textarea>
+
+          <p class="form-message" role="status" aria-live="polite" data-form-message></p>
+          <button class="button button--primary" type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <a class="brand brand--footer" href="#home">
+          <img src="assets/images/logo-ilab-2.png" alt="Logo WebCraft Studio versi footer" class="brand__logo">
+          <span class="brand__text">
+            <strong>WebCraft Studio</strong>
+            <span>Portfolio frontend dasar</span>
+          </span>
+        </a>
+        <p>Project refactor dari praktikum web lama yang dibuat tetap ringan, jelas, dan mudah dipelajari.</p>
+      </div>
+
+      <div>
+        <h2>Ikuti</h2>
+        <ul class="social-list">
+          <li><a href="#home"><img src="assets/icons/ri-facebook-fill.png" alt="Ikon Facebook"> Facebook</a></li>
+          <li><a href="#home"><img src="assets/icons/mdi-twitter.png" alt="Ikon Twitter"> Twitter</a></li>
+          <li><a href="#home"><img src="assets/icons/mdi-instagram.png" alt="Ikon Instagram"> Instagram</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Dokumentasi</h2>
+        <ul class="footer-links">
+          <li><a href="docs/project-structure.md">Struktur project</a></li>
+          <li><a href="README.md">README</a></li>
+        </ul>
+        <p class="copyright">© <span data-year></span> WebCraft Studio</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
